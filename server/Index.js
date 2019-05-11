@@ -1,4 +1,6 @@
 var app = require('express')();
+app.engine('html',require('express-art-template'));
+app.set('view engine','html');
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 
