@@ -3,9 +3,8 @@ var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 
 app.get('/',function (req,res) {
-    res.render('index',{});
+    res.render('html/index',{});
 });
-app.set('view engine','jade');
 
 io.on('connection', function (socket) {
     console.log('client '+ socket.id + ' connected');
