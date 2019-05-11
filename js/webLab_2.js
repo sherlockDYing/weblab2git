@@ -1,4 +1,4 @@
-const socket = io('localhost:3000');
+const socket = io('ec2-34-229-201-62.compute-1.amazonaws.com:3000');
 var scene,camera,renderer;
 var fpc;
 var clock = new THREE.Clock();
