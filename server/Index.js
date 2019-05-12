@@ -1,11 +1,9 @@
 var app = require('express')();
-app.engine('html',require('express-art-template'));
-app.set('view engine','html');
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 
 app.get('/',function (req,res) {
-    res.render('html/index',{});
+    res.render('index',{});
 });
 
 io.on('connection', function (socket) {
